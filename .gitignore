@@ -1,0 +1,13 @@
+# Local environment variables (Passwords/Secrets)
+.env
+
+# Python cache files
+__pycache__/
+*.py[cod]
+
+# Virtual environments
+venv/
+.venv/
+
+dataset/
+*.csv
