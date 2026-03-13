@@ -1,5 +1,6 @@
 import pandas as pd
-from utils import remove_extra_spaces, title_grammar
+import json
+from utils import *
 
 raw = pd.read_csv('dataset/RAW_recipes.csv', encoding='latin1')
 df1 = raw.copy()
@@ -78,8 +79,17 @@ print(df1[['name', 'step_count', 'ingredient_count']].head())
 
 # handle outliers 
 # validate data
-# print(raw.head())
+recipe_schema = infer_schema(df1)
+print("Inferred Schema:", recipe_schema)
+
+df1 = validate_and_purge(df1, recipe_schema)
+
+save_schema_json(df1, 'df1_columns.json')
+
+df1.to_csv('cleaned_recipes.csv', index=False)
+
+print("schema defined.")
+
 print(df1.head())
-df1.to_csv('dataset/df1/cleaned_recipes.csv', index=False)
 
 

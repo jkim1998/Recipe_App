@@ -1,0 +1,14 @@
+{
+    "name": "str",
+    "id": "int",
+    "minutes": "int",
+    "contributor_id": "int",
+    "submitted": "datetime",
+    "tags": "str",
+    "nutrition": "str",
+    "steps": "str",
+    "description": "str",
+    "ingredients": "str",
+    "step_count": "int",
+    "ingredient_count": "int"
+}

@@ -1,0 +1,14 @@
+{
+    "name": "object",
+    "id": "int64",
+    "minutes": "int64",
+    "contributor_id": "object",
+    "submitted": "datetime64[ns]",
+    "tags": "object",
+    "nutrition": "object",
+    "steps": "object",
+    "description": "object",
+    "ingredients": "object",
+    "step_count": "int64",
+    "ingredient_count": "int64"
+}
